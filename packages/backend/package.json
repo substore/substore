@@ -1,0 +1,10 @@
+{
+  "name": "@substore/backend",
+  "version": "1.0.0",
+  "description": "substore's backend",
+  "dependencies": {
+    "apollo-server-koa": "^3.10.2",
+    "graphql": "^16.6.0",
+    "koa": "^2.13.4"
+  }
+}

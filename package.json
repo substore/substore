@@ -1,0 +1,16 @@
+{
+  "name": "substore",
+  "version": "1.0.0",
+  "description": "Database as a Service",
+  "scripts": {
+    "moon": "moon"
+  },
+  "devDependencies": {
+    "@moonrepo/cli": "^0.14.1",
+    "rome": "0.9.2-next"
+  },
+  "engines": {
+    "node": "18.9.1"
+  },
+  "packageManager": "pnpm@7.9.0"
+}
