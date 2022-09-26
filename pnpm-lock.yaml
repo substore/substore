@@ -1,4 +1,4 @@
-lockfileVersion: 5.4
+lockfileVersion: 5.3
 
 importers:
 
@@ -24,7 +24,7 @@ importers:
       typescript: 4.8.3
     dependencies:
       autoprefixer: 10.4.12_postcss@8.4.16
-      next: 12.3.1_biqbaboplfbrettd7655fr4n2y
+      next: 12.3.1_react-dom@18.2.0+react@18.2.0
       postcss: 8.4.16
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -1440,7 +1440,7 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  /next/12.3.1_biqbaboplfbrettd7655fr4n2y:
+  /next/12.3.1_react-dom@18.2.0+react@18.2.0:
     resolution: {integrity: sha512-l7bvmSeIwX5lp07WtIiP9u2ytZMv7jIeB8iacR28PuUEFG5j0HGAPnMqyG5kbZNBG2H7tRsrQ4HCjuMOPnANZw==}
     engines: {node: '>=12.22.0'}
     hasBin: true
