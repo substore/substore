@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": "substore's backend",
   "dependencies": {
-    "apollo-server-koa": "^3.10.2",
-    "graphql": "^16.6.0",
-    "koa": "^2.13.4"
+    "apollo-server": "^3.10.2",
+    "apollo-server-core": "^3.10.2",
+    "apollo-server-fastify": "^3.10.2",
+    "apollo-server-plugin-base": "^3.6.2",
+    "fastify": "^4.6.0",
+    "graphql": "^16.6.0"
+  },
+  "devDependencies": {
+    "rome": "^0.9.2-next"
   }
 }
