@@ -4,6 +4,7 @@ import {
   ApolloServerPluginLandingPageLocalDefault,
 } from 'apollo-server-core';
 import { ApolloServerPlugin } from 'apollo-server-plugin-base';
+import { context } from "../prisma/context";
 import fastify, { FastifyInstance } from 'fastify';
 
 function fastifyAppClosePlugin(app: FastifyInstance): ApolloServerPlugin {
@@ -23,6 +24,7 @@ async function startApolloServer(typeDefs: any, resolvers: any) {
   const server = new ApolloServer({
     typeDefs,
     resolvers,
+    context: context,
     csrfPrevention: true,
     cache: 'bounded',
     plugins: [
