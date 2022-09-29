@@ -5,7 +5,7 @@
   "scripts": {
     "moon": "moon",
     "prepare": "husky install",
-    "lint": "pnpm prettier write ."
+    "format": "pnpm prettier write ."
   },
   "devDependencies": {
     "@moonrepo/cli": "^0.14.1",
