@@ -2,12 +2,15 @@
   "name": "@substore/backend",
   "version": "1.0.0",
   "description": "substore's backend",
+  "main": "build/src/server.js",
   "scripts": {
     "prisma:migrate": "prisma migrate dev",
     "prisma:push": "prisma db push",
     "prisma:studio": "prisma studio",
-    "start": "pnpm build",
-    "build": "nodemon src/server.ts"
+    "start:dev": "pnpm build",
+    "build:dev": "nodemon --exec ts-node src/server.ts",
+    "start:prod": "tsc -p tsconfig.json",
+    "build:prod": "node build/src/server.js"
   },
   "dependencies": {
     "@prisma/client": "^4.4.0",
@@ -16,7 +19,8 @@
     "apollo-server-fastify": "^3.10.2",
     "apollo-server-plugin-base": "^3.6.2",
     "fastify": "^4.6.0",
-    "graphql": "^16.6.0"
+    "graphql": "^16.6.0",
+    "nexus": "^1.3.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20",

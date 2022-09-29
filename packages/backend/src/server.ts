@@ -5,6 +5,7 @@ import {
 } from 'apollo-server-core';
 import { ApolloServerPlugin } from 'apollo-server-plugin-base';
 import { context } from "../prisma/context";
+import { schema } from './schema'
 import fastify, { FastifyInstance } from 'fastify';
 
 function fastifyAppClosePlugin(app: FastifyInstance): ApolloServerPlugin {
@@ -19,11 +20,10 @@ function fastifyAppClosePlugin(app: FastifyInstance): ApolloServerPlugin {
   };
 }
 
-async function startApolloServer(typeDefs: any, resolvers: any) {
+async function startApolloServer({ }) {
   const app = fastify();
   const server = new ApolloServer({
-    typeDefs,
-    resolvers,
+    schema: schema,
     context: context,
     csrfPrevention: true,
     cache: 'bounded',
@@ -39,3 +39,5 @@ async function startApolloServer(typeDefs: any, resolvers: any) {
   await app.listen(4000);
   console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`);
 }
+
+startApolloServer(schema);
