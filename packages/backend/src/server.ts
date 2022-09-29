@@ -4,8 +4,8 @@ import {
   ApolloServerPluginLandingPageLocalDefault,
 } from 'apollo-server-core';
 import { ApolloServerPlugin } from 'apollo-server-plugin-base';
-import { context } from "../prisma/context";
-import { schema } from './schema'
+import { context } from "../context";
+import { schema } from '../schema'
 import fastify, { FastifyInstance } from 'fastify';
 
 function fastifyAppClosePlugin(app: FastifyInstance): ApolloServerPlugin {
