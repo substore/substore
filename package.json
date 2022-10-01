@@ -8,7 +8,7 @@
     "format": "pnpm prettier write ."
   },
   "devDependencies": {
-    "@moonrepo/cli": "^0.14.1",
+    "@moonrepo/cli": "^0.15.0",
     "husky": "^8.0.0",
     "prettier": "^2.7.1",
     "rome": "0.9.2-next",
