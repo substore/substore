@@ -12,7 +12,7 @@
     "husky": "^8.0.0",
     "prettier": "^2.7.1",
     "rome": "0.9.2-next",
-    "typescript": "4.8.3"
+    "typescript": "4.8.4"
   },
   "engines": {
     "node": "18.9.1"
