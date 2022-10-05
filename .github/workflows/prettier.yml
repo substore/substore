@@ -1,4 +1,4 @@
-name: Prettier
+name: prettier
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
 
 
 jobs:
-  run-prettier:
+  substore:
     name: Run Prettier
     runs-on: ubuntu-latest
     steps:
