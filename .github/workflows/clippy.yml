@@ -7,12 +7,9 @@ on:
 jobs:
   substore:
     name: clippy
-
-    runs-on: 
-    example_matrix:
-      strategy:
-        matrix:
-          os: [ubuntu-latest, macos-lastest]
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-lastest]
          
     runs-on: ${{ matrix.os }}
 
@@ -28,5 +25,5 @@ jobs:
       - name: Install deps
         run: sudo apt-get -y update && sudo apt-get -y install libwebkit2gtk-4.0-dev build-essential curl wget libssl-dev libgtk-3-dev libayatana-appindicator3-dev librsvg2-dev pkg-config clang
       
-      name: Lint
+      - name: Lint
         run: cargo clippy -- -D warnings
