@@ -5,3 +5,8 @@
 type Query {
   ok: Boolean!
 }
+
+type User {
+  id: Int
+  username: String
+}
