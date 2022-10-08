@@ -7,6 +7,7 @@
     "prisma:migrate": "prisma migrate dev",
     "prisma:push": "prisma db push",
     "prisma:studio": "prisma studio",
+    "prisma:pull": "prisma db pull",
     "start:dev": "pnpm build:dev",
     "build:dev": "nodemon --exec ts-node src/server.ts",
     "start:prod": "tsc -p tsconfig.json",
