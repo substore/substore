@@ -1,20 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: [
-		"./pages/**/*.{js,ts,jsx,tsx}",
-		"./components/**/*.{js,ts,jsx,tsx}"
+	  "./pages/**/*.{js,ts,jsx,tsx}",
+	  "./components/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
-		extend: {
-			fontFamily: {
-				sans: ["Poppins", "sans-serif"],
-				heading: ["Red Hat Display", "sans-serif"]
-			},
-			colors: {
-				bgblue: "#195BBF",
-				line: "#424242"
-			}
-		}
+	  extend: {
+		fontFamily: {
+		  poppins: "Poppins",
+		  "red-hat-display": "'Red Hat Display'",
+		},
+	  },
+	  colors: {
+		white: "#fff",
+		gray: { "100": "#f1f1f1", "200": "#999" },
+		teal: "#2b9baa",
+		green: "#21ec8b",
+		black: "#000",
+	  },
+	  fontSize: {},
 	},
-	plugins: []
-};
+	corePlugins: { preflight: false },
+  };
+  
