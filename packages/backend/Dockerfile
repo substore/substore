@@ -1,5 +1,5 @@
 # Node version 16 on Alpine
-FROM node:16-alpine
+FROM node:18-alpine
 
 # Installed required deps
 RUN apk add curl
