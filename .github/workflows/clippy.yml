@@ -7,15 +7,12 @@ on:
 jobs:
   substore:
     name: clippy
-    strategy:
-      matrix:
-        os: [ubuntu-20.24, ubuntu-22.04]
          
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-22.04
 
     steps:  
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Install rust toolchain
         uses: actions-rs/toolchain@v1
         with:
