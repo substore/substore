@@ -3,6 +3,7 @@ import logo from "../assets/blue-green-icon.png"
 import Image from 'next/image'
 import cloud from "../assets/path905-36.png"
 import Text from "../components/Text"
+import { useState } from "react";
 
 const Home: NextPage = () => {
   return (
@@ -14,22 +15,31 @@ const Home: NextPage = () => {
             <div><Image src={logo} height="40" width="40"/></div>
             <b className="ml-3 -translate-y-1">Substore</b>
           </div>
-                
+          <div>
+          <button className="border-none text-white font-red-hat-display text-[14px] bg-gray-300 p-2 rounded-xl flex">
+            <div>Dashboard</div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="ml-0.5 w-4 h-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+
+            </button>
+            </div>
+            
       </div>
       <div className="w-full bg-gray-200 h-[0.005rem] -translate-y-2"></div>
       {/*Main*/}
-      <div className="try w-10/12 h-screen absolute top-0 left-62 -z-10"></div>
-      <div className="flex mx-auto justify-between w-11/12 mt-36">
+      <div className="try sm:w-screen md:w-screen lg:w-10/12 h-screen absolute top-0 left-62 -z-10"></div>
+      <div className="md:block lg:flex mx-auto justify-between w-11/12 mt-36">
           {/*Text*/}
-          <div>
+          <div className="md:w-9/12  md:mx-auto">
             <div className="text-[64px] text-white font-red-hat-display w-[600px]">
               <Text/>{" "} for your app, in seconds.</div>
             <div className="text-white font-poppins text-[20px] text-gray-200 w-[450px]">The all-in-one store platform, built from the ground up.</div>
           </div>
           {/*Image*/}
-          <div className="relative w-[400px]">
+          <div className="sm:hidden md:hidden lg:block relative w-[400px]">
             
-            <div className="fixed ml-[80px]">
+            <div className="relative ml-[80px]">
           <Image src={cloud} className="h-[170px] w-[288px]"/>
           </div>
           <div className="absolute top-[65px]">
