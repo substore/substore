@@ -16,15 +16,7 @@ const Home: NextPage = () => {
             <div><Image src={logo} height="40" width="40"/></div>
             <b className="ml-3 -translate-y-1">Substore</b>
           </div>
-          <div>
-          <button className="border-none text-white font-red-hat-display text-[14px] bg-gray-300 p-2 rounded-xl flex">
-            <div>Dashboard</div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="ml-0.5 w-4 h-4">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
-
-            </button>
-            </div>
+        
             
       </div>
       <div className="w-full bg-gray-200 h-[0.005rem] -translate-y-2"></div>
