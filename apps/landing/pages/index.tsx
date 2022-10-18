@@ -1,9 +1,10 @@
 import type { NextPage } from "next";
+import { useState } from "react";
 import logo from "../assets/blue-green-icon.png"
 import Image from 'next/image'
 import cloud from "../assets/path905-36.png"
 import Text from "../components/Text"
-import { useState } from "react";
+
 
 const Home: NextPage = () => {
   return (
