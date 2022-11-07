@@ -1,6 +1,5 @@
 [workspace]
 
 members = [
-    "packages/provisioner",
     "apps/cli"
 ]
