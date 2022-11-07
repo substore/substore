@@ -1,0 +1,5 @@
+mutation CreateVolume($input: CreateVolumeInput!) {
+  createVolume(input: $input) {
+    clientMutationId
+  }
+}

@@ -1,0 +1,9 @@
+overwrite: true
+schema: "https://api.fly.io/graphql"
+documents: "./src/gql/**/*.graphql"
+generates:
+  src/gql/sdk.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-graphql-request"

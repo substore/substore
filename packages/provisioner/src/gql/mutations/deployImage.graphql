@@ -1,0 +1,5 @@
+mutation DeployImage($input: DeployImageInput!) {
+  deployImage(input: $input) {
+    clientMutationId
+  }
+}
