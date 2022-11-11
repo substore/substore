@@ -1,8 +1,8 @@
 $schema: 'https://moonrepo.dev/schemas/workspace.json'
 
 projects:
-  frontend: 'apps/**'
-  backend: 'packages/**'
+  frontend: 'apps/*'
+  backend: 'packages/*'
 
 node:
   version: '18.9.1'
