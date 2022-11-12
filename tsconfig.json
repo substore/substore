@@ -11,10 +11,13 @@
   },
   "references": [
     {
-      "path": "apps/frontend"
+      "path": "apps/dashboard"
     },
     {
       "path": "packages/backend"
+    },
+    {
+      "path": "packages/provisioner"
     }
   ]
 }
