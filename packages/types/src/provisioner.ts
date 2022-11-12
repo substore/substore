@@ -1,4 +1,4 @@
-import { ServiceProtocolType } from "../gql/sdk";
+import { ServiceProtocolType } from "../../provisioner/src/gql/sdk";
 
 interface Secrets {
   key: string;

@@ -4,7 +4,7 @@ dotenv.config();
 import { client } from "./gql/client";
 import { ServiceProtocolType } from "./gql/sdk";
 import { FLY_ORG_ID, FLY_REGION } from "./constant";
-import { ProvisionInput, DeployImageDefinition } from "./types";
+import { ProvisionInput, DeployImageDefinition } from "../../types/src/provisioner";
 
 export const provision = async (input: ProvisionInput): Promise<string> => {
   const app = await client.CreateApp({
