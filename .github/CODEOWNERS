@@ -1,2 +1,11 @@
 @wyzlle
 @anddddrew
+
+/packages/provisioner @wyzlle
+/packages/backend @anddddrew @wyzlle
+
+/packages/email @anddddrew
+/packages/sms @anddddrew
+/packages/types @anddddrew
+
+/.github/workflows @anddddrew
