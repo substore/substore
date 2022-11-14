@@ -1,0 +1,28 @@
+
+name: build
+
+on:
+   pull_request:
+   push:
+    branches:
+      - main
+      - feature/backupss
+jobs:
+  provisioner: 
+    name: provisioner
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+    
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 6.0.2
+
+      - name: Install deps for provisioner package
+        working-directory: ./packages/provisioner
+        run: pnpm install
+
+      - name: Build provisioner package
+        working-directory: ./packages/provisioner
+        run: pnpm build
