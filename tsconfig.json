@@ -1,23 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es2016",
+    "target": "ES2021",
     "module": "commonjs",
     "outDir": "dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "composite": true
-  },
-  "references": [
-    {
-      "path": "apps/dashboard"
-    },
-    {
-      "path": "packages/backend"
-    },
-    {
-      "path": "packages/provisioner"
-    }
-  ]
+  }
 }
