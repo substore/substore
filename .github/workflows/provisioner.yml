@@ -25,4 +25,4 @@ jobs:
 
       - name: Build provisioner package
         working-directory: ./packages/provisioner
-        run: pnpm build
+        run: pnpm codegen
