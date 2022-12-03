@@ -6,15 +6,24 @@ on:
    push:
     branches:
       - main
-      - feature/backupss
+      - feature/backups
 jobs:
-  provisioner: 
-    name: provisioner
-    runs-on: ubuntu-22.04
+  provisioner:
+    strategy:
+        matrix:
+          os: [macos-latest, ubuntu-latest, windows-latest]
+
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-    
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+            node-version: 18
+            cache: 'pnpm'
+
       - uses: pnpm/action-setup@v2.2.2
         with:
           version: 6.0.2
@@ -23,6 +32,14 @@ jobs:
         working-directory: ./packages/provisioner
         run: pnpm install
 
-      - name: Build provisioner package
+      - name: Generate GQL schema
         working-directory: ./packages/provisioner
         run: pnpm codegen
+
+      - name: Build provisioner
+        working -directory: ./packages/provisioner
+        run: pnpm build
+        with:
+            token: ${{ github.FLY_API_TOKEN }}
+            org: ${{ github.FLY_ORG_ID }}
+            region: ${{ github.FLY_REGION }}
