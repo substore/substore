@@ -5,11 +5,15 @@
   "scripts": {
     "moon": "moon",
     "prepare": "husky install",
-    "format": "pnpm prettier write ."
+    "format": "pnpm prettier write .",
+    "landing:dev": "cd apps/landing && pnpm dev",
+    "landing:build": "cd apps/landing && pnpm build",
+    "landing:start": "cd apps/landing && pnpm start",
+    "typecheck": "pnpm tsc"
   },
   "devDependencies": {
     "@moonrepo/cli": "0.16.1",
-    "husky": "^8.0.0",
+    "husky": "^8.0.1",
     "prettier": "^2.7.1",
     "rome": "0.9.2-next",
     "typescript": "4.8.4"

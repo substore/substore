@@ -1,6 +1,7 @@
-build
+build/
 coverage
 node_modules/
 dist
 .next
 pnpm-lock.yaml 
+target/
