@@ -1,0 +1,3 @@
+version: '3'
+
+# todo add provisioner, backend, redis & pg & frontend service

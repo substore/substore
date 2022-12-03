@@ -39,7 +39,3 @@ jobs:
       - name: Build provisioner
         working -directory: ./packages/provisioner
         run: pnpm build
-        with:
-            token: ${{ github.FLY_API_TOKEN }}
-            org: ${{ github.FLY_ORG_ID }}
-            region: ${{ github.FLY_REGION }}
