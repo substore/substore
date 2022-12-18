@@ -73,6 +73,8 @@ web_modules/
 # Output of 'npm pack'
 *.tgz
 
+.idea
+
 # Yarn Integrity file
 .yarn-integrity
 
