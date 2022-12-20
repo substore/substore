@@ -12,7 +12,7 @@
     "typecheck": "pnpm tsc"
   },
   "devDependencies": {
-    "@moonrepo/cli": "0.16.1",
+    "@moonrepo/cli": "0.21.1",
     "husky": "^8.0.2",
     "prettier": "^2.8.1",
     "rome": "0.9.2-next",
