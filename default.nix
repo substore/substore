@@ -9,8 +9,13 @@ pkgs.stenv.mkDerivation {
     buildPhase = ''
         docker-compose up -d
     '';
-     installPhase = ''
+    installPhase = ''
         mkdir -p $out/bin
         ln -s $PWD/build $out/bin/substore
       '';
+    meta = {
+          description = "A package for managing substore";
+          homepage = "https://substore.io";
+          maintainers = " Andrew Nijmeh" ;
+    };
 }
