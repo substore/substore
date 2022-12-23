@@ -31,7 +31,7 @@ importers:
       '@tremor/react': ^1.2.3
       '@types/node': 18.11.17
       '@types/react': 18.0.21
-      '@types/react-dom': 18.0.6
+      '@types/react-dom': 18.0.10
       autoprefixer: ^10.4.13
       babel-loader: ^8.3.0
       eslint: 8.25.0
@@ -66,7 +66,7 @@ importers:
       '@storybook/testing-library': 0.0.13_biqbaboplfbrettd7655fr4n2y
       '@types/node': 18.11.17
       '@types/react': 18.0.21
-      '@types/react-dom': 18.0.6
+      '@types/react-dom': 18.0.10
       babel-loader: 8.3.0_@babel+core@7.20.5
       eslint: 8.25.0
       eslint-config-next: 13.0.0_z4bbprzjrhnsfa24uvmcbu7f5q
@@ -5320,8 +5320,8 @@ packages:
   /@types/range-parser/1.2.4:
     resolution: {integrity: sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==}
 
-  /@types/react-dom/18.0.6:
-    resolution: {integrity: sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA==}
+  /@types/react-dom/18.0.10:
+    resolution: {integrity: sha512-E42GW/JA4Qv15wQdqJq8DL4JhNpB3prJgjgapN3qJT9K2zO5IIAQh4VXvCEDupoqAwnz0cY4RlXeC/ajX5SFHg==}
     dependencies:
       '@types/react': 18.0.21
     dev: true
