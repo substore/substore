@@ -1,4 +1,3 @@
-
 name: build
 
 on:
@@ -37,5 +36,5 @@ jobs:
         run: pnpm codegen
 
       - name: Build provisioner
-        working -directory: ./packages/provisioner
+        working-directory: ./packages/provisioner
         run: pnpm build
