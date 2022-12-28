@@ -1,5 +1,9 @@
 {
   "name": "database",
+  "scripts": {
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push --skip-generate"
+  },
   "devDependencies": {
     "nexus-prisma": "^0.35.0",
     "prisma": "^4.4.0"
