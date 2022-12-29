@@ -11,6 +11,12 @@ generator nexusPrisma {
   provider = "nexus-prisma"
 }
 
+model Account {
+  id Int @default(autoincrement()) @id
+  providerType String @map(name: "provider_type")
+  providerId String @map(name: "provider_id")
+}
+
 model User {
   id           String         @id @default(uuid())
   name         String
@@ -44,6 +50,8 @@ enum StoreType {
   MONGODB
   POSTGRESQL
   MYSQL
+  KAFKA
+  RABBITMQ
 }
 
 model Backup {

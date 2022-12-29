@@ -34,6 +34,7 @@ importers:
       '@types/react-dom': 18.0.6
       autoprefixer: ^10.4.13
       babel-loader: ^8.3.0
+      database: '*'
       eslint: 8.25.0
       eslint-config-next: 13.0.0
       eslint-plugin-storybook: ^0.6.8
@@ -48,6 +49,7 @@ importers:
       '@next/font': 13.0.7
       '@tremor/react': 1.2.3_biqbaboplfbrettd7655fr4n2y
       autoprefixer: 10.4.13_postcss@8.4.20
+      database: 0.0.2
       next: 13.0.0_672uxklweod7ene3nqtsh262ca
       next-http-proxy-middleware: 1.2.5
       postcss: 8.4.20
@@ -84,6 +86,7 @@ importers:
       '@types/uuid': ^8.3.4
       apollo-server-express: ^3.10.2
       connect-redis: ^6.1.3
+      database: '*'
       dotenv: ^16.0.3
       express: ^4.18.1
       express-session: ^1.17.3
@@ -116,6 +119,7 @@ importers:
       '@types/passport': 1.0.11
       '@types/passport-github2': 1.2.5
       '@types/uuid': 8.3.4
+      database: 0.0.2
       prisma: 4.4.0
 
   packages/database:
@@ -7813,6 +7817,9 @@ packages:
   /damerau-levenshtein/1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
     dev: true
+
+  /database/0.0.2:
+    resolution: {integrity: sha512-lrqvU32firrb2TBjn4Iv9V1Mh90rqUtyyLAvdSqdGP2w7IrNy+oI5IqGNowHq8o+/WVnQtKNfNIpLYd6uWZLHw==}
 
   /dataloader/2.1.0:
     resolution: {integrity: sha512-qTcEYLen3r7ojZNgVUaRggOI+KM7jrKxXeSHhogh/TWxYMeONEMqY+hmkobiYQozsGIyg9OYVzO4ZIfoB4I0pQ==}
