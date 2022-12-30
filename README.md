@@ -1,7 +1,8 @@
 <p align="center">
     <a href="https://github.com/substore/substore">
-        <img height=300 alt="substore logo"
-        src="https://user-images.githubusercontent.com/59238070/199231127-4cb39582-07db-4e66-a2d9-a35f60058122.png">
+        <img height=300 alt="substore preview"
+        src=![dashboard](https://user-images.githubusercontent.com/59238070/210085156-1f5d5d92-425b-4a82-ad29-a219980323a7.png)
+"">
     </a>
     <h3 align="center">substore.io</h3>
     <p align="center">
