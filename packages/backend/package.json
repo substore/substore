@@ -7,7 +7,7 @@
     "migrate:dev": "prisma migrate dev",
     "migrate:deploy": "prisma migrate deploy",
     "migrate:status": "prisma migrate status",
-    "start:dev": "nodemon --exec ts-node src/server.ts"
+    "start:dev": "nodemon --exec ts-node src/index.ts"
   },
   "author": "wyzlle",
   "license": "MPL-2.0",
