@@ -7,6 +7,9 @@
     "lint": {
       "outputs": []
     },
+    "start:dev": {
+      "outputs": []
+    },
     "db:generate": {
       "cache": false
     },
