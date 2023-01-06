@@ -14,6 +14,6 @@ COPY . .
 
 RUN pnpm install
 
-EXPOSE 8080
+EXPOSE 4000
 
 CMD [ "pnpm", "start:dev" ]
