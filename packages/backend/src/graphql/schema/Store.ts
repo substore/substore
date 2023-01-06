@@ -91,7 +91,7 @@ export const deleteStoreMutation = mutationField("deleteStore", {
             await deprovision(name);
             await ctx.db.store.delete({
                 where: {
-                  name,
+                  id: name,
                 },
             });
             return true;
@@ -113,7 +113,7 @@ export const storesQuery = queryField("stores", {
       }
       const stores = await ctx.db.store.findUnique({
         where: {
-          name,
+          id: name,
         },
       });
       return stores;
@@ -131,7 +131,7 @@ export const storeQuery = queryField("store", {
         }
         const store = await ctx.db.store.findUnique({
             where: {
-                name,
+                id: name,
             },
         });
         return store;
