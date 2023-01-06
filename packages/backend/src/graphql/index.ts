@@ -1,10 +1,11 @@
 import { ApolloServer } from "apollo-server-express";
 import { makeSchema } from "nexus";
 import { Context, getContext } from "../context";
+import * as Store from "./schema/Store"
 import * as User from "./schema/User";
 
 export const schema = makeSchema({
-  types: [User],
+  types: [User, Store],
 });
 
 export const gqlServer = new ApolloServer({

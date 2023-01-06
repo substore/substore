@@ -101,3 +101,39 @@ export const deleteStoreMutation = mutationField("deleteStore", {
         }
     },
 });
+
+export const storesQuery = queryField("stores", {
+    type: list(store),
+    args: {
+      name: nonNull(stringArg()),
+    },
+    resolve: async (_, { name }, ctx: Context) => {
+      if (!ctx.user) {
+        return;
+      }
+      const stores = await ctx.db.store.findUnique({
+        where: {
+          name,
+        },
+      });
+      return stores;
+    },
+})
+
+export const storeQuery = queryField("store", {
+    type: store,
+    args: {
+        name: nonNull(stringArg()),
+    },
+    resolve: async (_, { name }, ctx: Context) => {
+        if (!ctx.user) {
+            return;
+        }
+        const store = await ctx.db.store.findUnique({
+            where: {
+                name,
+            },
+        });
+        return store;
+    }
+})
