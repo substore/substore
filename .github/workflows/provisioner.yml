@@ -21,15 +21,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
             node-version: 18
-            cache: 'pnpm'
-
-      - uses: pnpm/action-setup@v2.2.4
-        with:
-          version: 6.0.2
+            cache: 'npm' 
 
       - name: Install deps for provisioner package
         working-directory: ./packages/provisioner
-        run: pnpm install
+        run: npm  install
 
       - name: Generate GQL schema
         working-directory: ./packages/provisioner
@@ -37,4 +33,4 @@ jobs:
 
       - name: Build provisioner
         working-directory: ./packages/provisioner
-        run: pnpm build
+        run: npm build
