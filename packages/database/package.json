@@ -5,7 +5,9 @@
   "types": "./index.ts",
   "scripts": {
     "db:generate": "prisma generate",
-    "db:push": "prisma db push --skip-generate"
+    "db:push": "prisma db push --skip-generate",
+    "db:pull": "prisma db pull",
+    "db:migrate": "prisma migrate dev"
   },
   "devDependencies": {
     "nexus-prisma": "^0.35.0",
