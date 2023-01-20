@@ -22,4 +22,5 @@ module.exports = {
     fontSize: { sm: "13px", base: "14px" },
   },
   corePlugins: { preflight: false },
+  plugins: [require("daisyui")]
 };
