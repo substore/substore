@@ -2,7 +2,7 @@ import React from 'react';
 import * as AlertDialog from '@radix-ui/react-alert-dialog';
 import './styles.css';
 
-export const DeleteAccountModel = () => (
+export const DeleteAccountModal = () => (
     <AlertDialog.Root>
         <AlertDialog.Trigger asChild>
             <button className="Button violet">Delete Account</button>

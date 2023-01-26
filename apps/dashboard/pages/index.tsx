@@ -4,7 +4,7 @@ import { DeleteAccountModal } from "../components/DeleteAccountModal";
 const Home: NextPage = () => {
   return (
    <>
-    
+    <DeleteAccountModal />
    </>     
   )
 }
