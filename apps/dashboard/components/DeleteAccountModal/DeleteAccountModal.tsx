@@ -1,8 +1,9 @@
 import React from 'react';
-import * as AlertDialog from '@radix-ui-react-alert-dialog';
+import * as AlertDialog from '@radix-ui/react-alert-dialog';
+import './styles.css';
 
 const DeleteAccountModel = () => (
-    <AlertDialog.root>
+    <AlertDialog.Root>
         <AlertDialog.Trigger asChild>
             <button className="Button violet">Delete Account</button>
         </AlertDialog.Trigger>
@@ -23,5 +24,5 @@ const DeleteAccountModel = () => (
                 </div>
             </AlertDialog.Content>
         </AlertDialog.Portal>
-    </AlertDialog.root>
+    </AlertDialog.Root>
 )
