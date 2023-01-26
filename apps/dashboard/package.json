@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@next/font": "^13.0.7",
+    "@radix-ui/react-alert-dialog": "^1.0.2",
+    "@radix-ui/react-popover": "1.0.3",
     "@react-email/button": "0.0.5",
     "@react-email/html": "0.0.3",
     "@tremor/react": "^1.2.3",
@@ -20,6 +22,7 @@
     "next": "13.0.0",
     "next-http-proxy-middleware": "^1.2.5",
     "postcss": "^8.4.20",
+    "radix-ui": "^1.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-email": "1.6.0",
