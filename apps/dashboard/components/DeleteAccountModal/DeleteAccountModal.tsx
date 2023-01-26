@@ -1,6 +1,6 @@
 import React from 'react';
 import * as AlertDialog from '@radix-ui/react-alert-dialog';
-import './styles.css';
+import './DeleteAccountModal.module.css';
 
 export const DeleteAccountModal = () => (
     <AlertDialog.Root>

@@ -4,7 +4,7 @@
 @import '@radix-ui/colors/violet.css';
 
 /* reset */
-button {
+.button {
   all: unset;
 }
 
