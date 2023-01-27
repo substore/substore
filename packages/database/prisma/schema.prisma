@@ -56,7 +56,8 @@ enum StoreType {
 
 model Backup {
   id        String    @id @default(uuid())
-  url       String    @unique
+  name      String 
+  url       String   
   store     Store     @relation(fields: [storeId], references: [id])
   storeId   String
   createdAt DateTime  @default(now())

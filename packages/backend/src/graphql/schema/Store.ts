@@ -1,4 +1,3 @@
-
 import {
     list,
     enumType,
@@ -9,11 +8,11 @@ import {
     stringArg,
   } from "nexus";
   import { Store, StoreType } from "nexus-prisma";
-  import { Context } from "../../context";
-  import { deprovision, provision } from "../../../../provisioner/src";
-  import { randomBytes } from "crypto";
-  import { providers } from "../../provider";
   import { StoreType as PrismaStoreType } from "@prisma/client";
+  import { deprovision, provision } from "../../../../provisioner/src";
+  import { Context } from "../../context";
+  import { providers } from "../../provider";
+  import { randomBytes } from "crypto";
   
   export const store = objectType({
     name: Store.$name,
@@ -28,7 +27,7 @@ import {
   
   export const storeType = enumType(StoreType);
   
-  export const createStoreMutattion = mutationField("createStore", {
+  export const createStoreMutation = mutationField("createStore", {
     type: store,
     args: {
       type: nonNull(storeType),
@@ -137,4 +136,4 @@ import {
       });
       return store;
     },
-  });
+  });  
