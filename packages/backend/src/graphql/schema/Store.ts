@@ -13,8 +13,6 @@ import {
   import { Context } from "../../context";
   import { providers } from "../../provider";
   import { randomBytes } from "crypto";
-
-
   
   export const store = objectType({
     name: Store.$name,
@@ -29,7 +27,7 @@ import {
   
   export const storeType = enumType(StoreType);
   
-  export const createStoreMutattion = mutationField("createStore", {
+  export const createStoreMutation = mutationField("createStore", {
     type: store,
     args: {
       type: nonNull(storeType),
