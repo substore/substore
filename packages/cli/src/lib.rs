@@ -1,5 +1,6 @@
 pub(crate) mod commands;
 pub(crate) mod util;
+pub(crate) mod config;
 
 use anyhow::Result;
 use clap::Parser;
@@ -9,7 +10,7 @@ use commands::{handle_command, Commands};
 #[clap(
     name = "substore",
     about = "Interact with substore using the command line",
-    version = "0.1.0",
+    version = crate::config::CLI_VERSION,
     author = "substore"
 )]
 pub struct CLI {

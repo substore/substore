@@ -38,10 +38,10 @@ pub async fn run(options: Options) -> String {
             creds_login(email, password).await
         }
 
-        _ => panic!("Invalid options, run with --help for more info"),
+        _ => panic!("Invalid options, run {} auth --help for more info", crate::config::CLI_NAME),
     }
 }
 
 async fn creds_login(email: String, password: String) -> String {
-    todo!("Implement creds_login");
+    todo!("Implement creds_login")
 }
