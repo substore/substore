@@ -1,4 +1,5 @@
 pub(crate) mod commands;
+pub(crate) mod util;
 
 use anyhow::Result;
 use clap::Parser;
