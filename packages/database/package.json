@@ -10,7 +10,7 @@
     "db:migrate": "prisma migrate dev"
   },
   "devDependencies": {
-    "nexus-prisma": "^0.35.0",
+    "nexus-prisma": "^1.0.0",
     "prisma": "^4.4.0",
     "tsup": "^6.5.0"
   },
