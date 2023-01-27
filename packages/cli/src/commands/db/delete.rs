@@ -1,5 +1,8 @@
 use anyhow::Result;
 use clap::Parser;
+use serde_json::json;
+
+use crate::state::httpclient::HttpClient;
 
 /*
 query DeleteStore(name: String!) {
@@ -13,22 +16,19 @@ pub struct Options {
     pub name: String,
 }
 
-pub async fn run(command: Options) -> Result<()> {
-    let client = reqwest::Client::new();
+pub async fn run(command: Options, http: HttpClient) -> Result<()> {
+    let query = r#"
+    query DeleteStore(name: String!) {
+        deleteStore(name: $name)
+    }"#;
 
-    let res = client.post("http://localhost:8080/graphql")
-        .json(&serde_json::json!({
-            "query": "query DeleteStore($name: String!) {
-                deleteStore(name: $name)
-            }",
-            "variables": {
-                "name": command.name
-            }
-        }))
-        .send()
-        .await?;
+    let variables = json!({
+        "name": command.name
+    });
 
-    println!("Status: {}", res.status());
+    let res = http.request::<serde_json::Value>(query, Some((variables, "application/json"))).await;
+
+    println!("{:?}", res);
 
     Ok(())
 }

@@ -4,6 +4,8 @@ pub mod delete;
 use anyhow::Result;
 use clap::{Parser, Subcommand};
 
+use crate::state::State;
+
 #[derive(Debug, Subcommand)]
 pub enum Commands {
     #[clap(alias = "c")]
@@ -19,9 +21,9 @@ pub struct Options {
     pub commands: Commands,
 }
 
-pub async fn run(options: Options) -> Result<()> {
+pub async fn run(options: Options, state: State) -> Result<()> {
     match options.commands {
-        Commands::Create(options) => create::run(options).await,
-        Commands::Delete(options) => delete::run(options).await,
+        Commands::Create(options) => create::run(options, state.http).await,
+        Commands::Delete(options) => delete::run(options, state.http).await,
     }
 }

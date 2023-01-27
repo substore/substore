@@ -1,6 +1,8 @@
 use anyhow::Result;
 use clap::Parser;
+use serde_json::json;
 use crate::util::types::StoreType;
+use crate::state::httpclient::HttpClient;
 
 /*
 query CreateStore(type: StoreType!) {
@@ -17,7 +19,6 @@ query CreateStore(type: StoreType!) {
 #[clap(about = "Create a new store")]
 pub struct Options {
     pub s_type: String,
-    pub name: String,
 }
 
 fn parse_to_storetype(s_type: String) -> StoreType {
@@ -32,30 +33,26 @@ fn parse_to_storetype(s_type: String) -> StoreType {
     }
 }
 
-pub async fn run(command: Options) -> Result<()> {
-    let client = reqwest::Client::new();
-
+pub async fn run(command: Options, http: HttpClient) -> Result<()> {
     let s_type = parse_to_storetype(command.s_type);
 
-    let res = client.post("http://localhost:8080/graphql")
-        .json(&serde_json::json!({
-            "query": "query CreateStore($type: StoreType!) {
-                createStore(type: $type){
-                    id
-                    name
-                    type
-                    url
-                }
-            }",
-            "variables": {
-                "name": command.name,
-                "type": s_type
-            }
-        }))
-        .send()
-        .await?;
+    let query = r#"
+    query CreateStore(type: StoreType!) {
+        createStore(type: $type){
+            id
+            name
+            type
+            url
+        }
+    }"#;
 
-    println!("Status: {}", res.status());
+    let variables = json!({
+        "type": s_type
+    });
+
+    let res = http.request::<serde_json::Value>(query, Some((variables, "application/json"))).await;
+
+    println!("{:?}", res);
 
     Ok(())
 }
