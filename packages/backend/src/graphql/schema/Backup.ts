@@ -20,6 +20,6 @@ export const backup = objectType({
     },
 })
 
-export const createBackupMutation = mutationField("createStore". {
+export const createBackupMutation = mutationField("createStore", {
     type: backup
 })
