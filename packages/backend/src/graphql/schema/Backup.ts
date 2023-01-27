@@ -9,7 +9,7 @@ import {
   } from "nexus";
 import { Backup } from "nexus-prisma";
 
-export const store = objectType({
+export const backup = objectType({
     name: Backup.$name,
     description: Backup.$description,
     definition(t) {
@@ -18,4 +18,8 @@ export const store = objectType({
         t.field(Backup.store);
         t.field(Backup.storeId);
     },
+})
+
+export const createBackupMutation = mutationField("createStore". {
+    type: backup
 })
