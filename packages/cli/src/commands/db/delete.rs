@@ -16,7 +16,7 @@ pub struct Options {
 pub async fn run(command: Options) -> Result<()> {
     let client = reqwest::Client::new();
 
-    let res = client.post("http://localhost:8080/graphql")
+    let res = client.post("http://localhost:4000/graphql")
         .json(&serde_json::json!({
             "query": "query DeleteStore($name: String!) {
                 deleteStore(name: $name)

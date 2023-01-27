@@ -37,7 +37,7 @@ pub async fn run(command: Options) -> Result<()> {
 
     let s_type = parse_to_storetype(command.s_type);
 
-    let res = client.post("http://localhost:8080/graphql")
+    let res = client.post("http://localhost:4000/graphql")
         .json(&serde_json::json!({
             "query": "query CreateStore($type: StoreType!) {
                 createStore(type: $type){
