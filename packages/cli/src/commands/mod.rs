@@ -16,4 +16,4 @@ pub async fn handle_command(command: Commands) -> Result<()> {
         Commands::Auth(options) => auth::run(options).await,
         Commands::Db(options) => db::run(options).await,
     }
-}   
+}    

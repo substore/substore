@@ -7,7 +7,7 @@ use commands::{handle_command, Commands};
 #[derive(Debug, Parser)]
 #[clap(
     name = "substore",
-    about = "Interact with substore using the command line",
+    about = "Interact with Substore via the CLI ☁️",
     version = "0.1.0",
     author = "substore"
 )]
