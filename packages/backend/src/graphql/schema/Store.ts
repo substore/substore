@@ -91,7 +91,7 @@ import {
         if (!store) {
           return;
         }
-        await deprovision(name);
+        await deprovision(name)l;
         await ctx.db.store.delete({
           where: {
             name,
