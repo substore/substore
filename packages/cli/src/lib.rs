@@ -1,14 +1,18 @@
 pub(crate) mod commands;
+pub(crate) mod util;
+pub(crate) mod config;
+pub(crate) mod state;
 
 use anyhow::Result;
 use clap::Parser;
 use commands::{handle_command, Commands};
+use state::State;
 
 #[derive(Debug, Parser)]
 #[clap(
     name = "substore",
-    about = "Interact with Substore via the CLI ☁️",
-    version = "0.1.0",
+    about = "Interact with substore using the command line",
+    version = crate::config::CLI_VERSION,
     author = "substore"
 )]
 pub struct CLI {
@@ -18,7 +22,10 @@ pub struct CLI {
 
 pub async fn run() -> Result<()> {
     let cli = CLI::parse();
-    if let Err(error) = handle_command(cli.commands).await {
+
+    let state = State::new().await;
+
+    if let Err(error) = handle_command(cli.commands, state).await {
         eprintln!("{}", error);
     }
 
