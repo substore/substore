@@ -2,8 +2,8 @@ import { User } from "@prisma/client";
 import passport from "passport";
 import { Strategy as GitHubStrategy } from "passport-github2";
 import { v4 } from "uuid";
-import { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } from "./constant";
-import { prisma } from "./db";
+import { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } from "../constant";
+import { prisma } from "../db";
 
 // declare Express.User
 declare global {

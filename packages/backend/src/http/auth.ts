@@ -1,6 +1,6 @@
 import { Router } from "express";
 import passport from "passport";
-import { githubStrat } from "../auth";
+import { githubStrat } from "../lib/auth";
 
 export const authRouter: Router = Router();
 passport.use(githubStrat);

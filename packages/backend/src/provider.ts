@@ -48,5 +48,17 @@ export const providers = new Map([
             username: "mongodb",
             dbName: "",
         },
+        
     ],
+    [
+        "ELASTICSEARCH",
+        {
+            "image": "ghcr.io/substore/elasticsearch:8.6.0",
+            password_var: "ELASTICSEARCH_PASSWORD",
+            port: 9200,
+            data: "/usr/share/elasticsearch/data",
+            protocol: "http",
+            username: "elastic",
+        }
+    ]
 ])

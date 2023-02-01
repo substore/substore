@@ -9,7 +9,7 @@ import {
 } from "nexus";
 import { Store, StoreType } from "nexus-prisma";
 import { Context } from "../../context";
-import { deprovision, provision } from "../../../../provisioner/src";
+import { deprovision, provision } from "../../../../provisioner/src/index";
 import { randomBytes } from "crypto";
 import { providers } from "../../provider";
 import { StoreType as PrismaStoreType } from "@prisma/client";
@@ -136,4 +136,4 @@ export const storeQuery = queryField("store", {
     });
     return store;
   },
-});
+})

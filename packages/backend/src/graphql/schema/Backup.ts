@@ -1,3 +1,4 @@
+/*
 import {
     list,
     enumType,
@@ -40,14 +41,13 @@ export const deleteBackupMutation = mutationField("deleteBackup", {
             const backup = await ctx.db.backup.findFirst({
                 where: {
                     name,
-                    userId: ctx.user.id,
                 },
             });
             if (!backup) {
                 return;
             }
-            await 
-            
+            await    
         }
     }
 })
+*/
