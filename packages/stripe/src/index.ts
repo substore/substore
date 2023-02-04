@@ -1,18 +1,15 @@
-import Stripe from "stripe";
-import Strpe from "stripe";
+import{ Stripe } from "stripe";
 
-if (!process.env.STRIPE_SECRET_API_KEY)
-  throw new Error(
-    `Please provide a STRIPE_SECRET_API_KEY environment variable!`
-  );
+const stripe_key = process.env.STRIPE_API_KEY;
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_API_KEY, {
-  // @ts-ignore The Stripe docs state that null denotes the Stripe account's default version and to use ts-ignore
-  apiVersion: null,
-  appInfo: {
-    name: "Substore",
-    partner_id: "pp_partner_IsY1mtoxV00gSQ",
-  },
-});
+const stripe = stripe_key
+  ? new Stripe(stripe_key, {
+      apiVersion: '2022-11-15',
+      appInfo: {
+        name: "Substore",
+        partner_id: "pp_partner_IsY1mtoxV00gSQ"
+      }
+    })
+  : null;
 
 export default stripe;
