@@ -13,6 +13,8 @@ lerna-debug.log*
 
 .react-email/
 
+www/
+
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
@@ -28,6 +30,9 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 *.lcov
+
+# turbo
+.turbo
 
 # nyc test coverage
 .nyc_output
