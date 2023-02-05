@@ -15,7 +15,7 @@ if (accountSid && authToken && myNumber && twilioNumber) {
     .create({
         from: twilioNumber,
         to: myNumber,
-        body: "hi hackclub!",
+        body: "Here is your 2FA code for Substore: 28593",
     })
     .then((message) => console.log(message.sid));
 } else {
