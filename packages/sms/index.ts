@@ -1,10 +1,10 @@
 import "dotenv/config";
 import { Twilio } from "twilio";
 
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
-const twilioNumber = process.env.TWILIO_PHONE_NUMBER;
-const myNumber = process.env.MY_NUMBER;
+const accountSid = process.env.TWILIO_ACCOUNT_SID || "";
+const authToken = process.env.TWILIO_AUTH_TOKEN || "";
+const myNumber = process.env.MY_NUMBER || "";
+const twilioNumber = process.env.TWILIO_PHONE_NUMBER || "";
 
 const client = new Twilio(accountSid, authToken);
 
