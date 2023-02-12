@@ -11,7 +11,7 @@ use state::State;
 #[derive(Debug, Parser)]
 #[clap(
     name = "substore",
-    about = "Interact with substore using the command line",
+    about = "Interact with substore using the CLI ☁️",
     version = crate::config::CLI_VERSION,
     author = "substore"
 )]
