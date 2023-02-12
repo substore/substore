@@ -1,20 +1,20 @@
- datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
-}
-
 generator client {
-  provider        = "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 generator nexusPrisma {
   provider = "nexus-prisma"
 }
 
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
 model Account {
-  id Int @default(autoincrement()) @id
-  providerType String @map(name: "provider_type")
-  providerId String @map(name: "provider_id")
+  id           Int    @id @default(autoincrement())
+  providerType String @map("provider_type")
+  providerId   String @map("provider_id")
 }
 
 model User {
@@ -22,27 +22,49 @@ model User {
   name         String
   email        String         @unique
   github       String         @unique
-  stores       Store[]
   createdAt    DateTime       @default(now())
   updatedAt    DateTime       @updatedAt
   deletedAt    DateTime?
   Organization Organization[]
+  stores       Store[]
 }
 
 model Store {
   id              String        @id @default(uuid())
-  name            String
+  name            String        @unique
   type            StoreType
   url             String
-  user            User          @relation(fields: [userId], references: [id])
   userId          String
-  backups         Backup[]
   backupFrequency Int           @default(1440)
   createdAt       DateTime      @default(now())
   updatedAt       DateTime      @updatedAt
   deletedAt       DateTime?
-  Organization    Organization? @relation(fields: [organizationId], references: [id])
   organizationId  String?
+  Organization    Organization? @relation(fields: [organizationId], references: [id])
+  user            User          @relation(fields: [userId], references: [id])
+  backups         Backup[]
+}
+
+model Backup {
+  id        String    @id @default(uuid())
+  url       String
+  storeId   String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
+  name      String
+  store     Store     @relation(fields: [storeId], references: [id])
+}
+
+model Organization {
+  id          String   @id @default(uuid())
+  name        String
+  description String?
+  ownerId     String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  owner       User     @relation(fields: [ownerId], references: [id])
+  stores      Store[]
 }
 
 enum StoreType {
@@ -52,26 +74,4 @@ enum StoreType {
   MYSQL
   KAFKA
   RABBITMQ
-}
-
-model Backup {
-  id        String    @id @default(uuid())
-  name      String 
-  url       String   
-  store     Store     @relation(fields: [storeId], references: [id])
-  storeId   String
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
-  deletedAt DateTime?
-}
-
-model Organization {
-  id          String   @id @default(uuid())
-  name        String
-  description String?
-  ownerId     String
-  owner       User     @relation(fields: [ownerId], references: [id])
-  stores      Store[]
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
 }
