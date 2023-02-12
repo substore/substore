@@ -3,10 +3,6 @@
   "version": "0.0.1",
   "description": "substore's backend",
   "scripts": {
-    "generate": "prisma generate",
-    "migrate:dev": "prisma migrate dev",
-    "migrate:deploy": "prisma migrate deploy",
-    "migrate:status": "prisma migrate status",
     "start:dev": "nodemon --exec ts-node src/index.ts"
   },
   "author": "wyzlle",

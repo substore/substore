@@ -42,7 +42,7 @@ export const createStoreMutattion = mutationField("createStore", {
       return;
     }
 
-    const password = randomBytes(9).toString("hex");
+    const password =  randomBytes(9).toString("hex");
     const storeApp = await provision({
       image: config.image,
       secrets: [
