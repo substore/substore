@@ -37,8 +37,6 @@ pub async fn run(options: Options) -> String {
 
             creds_login(email, password).await
         }
-
-        _ => panic!("Invalid options, run {} auth --help for more info", crate::config::CLI_NAME),
     }
 }
 

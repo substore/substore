@@ -1,23 +1,13 @@
-use anyhow::Result;
 use clap::Parser;
-use serde_json::json;
+use anyhow::{Result, anyhow};
 use crate::util::types::StoreType;
 use crate::state::httpclient::HttpClient;
 
-/*
-query CreateStore(type: StoreType!) {
-    createStore(type: $type){
-        id
-        name
-        type
-        url
-    }
-}
-*/
-
 #[derive(Debug, Parser)]
-#[clap(about = "Create a new store")]
+#[clap(about = "Create a new backup")]
 pub struct Options {
+    #[clap(help = "Name of the backup")]
+    pub b_name: String,
     #[clap(help = "Type of the store")]
     pub s_type: String,
 }
@@ -35,25 +25,11 @@ fn parse_to_storetype(s_type: String) -> StoreType {
 }
 
 pub async fn run(command: Options, http: HttpClient) -> Result<()> {
-    let s_type = parse_to_storetype(command.s_type);
+    let b_name = command.b_name;
+    let s_type = command.s_type;
 
-    let query = r#"
-    query CreateStore(type: StoreType!) {
-        createStore(type: $type){
-            id
-            name
-            type
-            url
-        }
-    }"#;
+    println!("Backup name: {}", b_name);
+    println!("Store type: {}", parse_to_storetype(s_type));
 
-    let variables = json!({
-        "type": s_type
-    });
-
-    let res = http.request::<serde_json::Value>(query, Some((variables, "application/json"))).await;
-
-    println!("{:?}", res);
-
-    Ok(())
+    Err(anyhow!("Not implemented"))
 }
