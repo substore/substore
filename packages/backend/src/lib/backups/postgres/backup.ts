@@ -1,6 +1,6 @@
 import { exec } from "child_process";
 import { PutObjectCommand, S3Client, S3ClientConfig, DeleteObjectCommand } from "@aws-sdk/client-s3";
-import { createReadStream, createWriteStream } from "fs";
+import { createReadStream } from "fs";
 
 const uploadtoBucket = async ({ name, path }: {name: string, path: string}) => {
     console.log("Uploading to bucket");
