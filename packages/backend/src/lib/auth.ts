@@ -3,7 +3,7 @@ import passport from "passport";
 import { Strategy as GitHubStrategy } from "passport-github2";
 import { v4 } from "uuid";
 import { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } from "../constant";
-import { prisma } from "../db";
+import { client } from "../db";
 
 // declare Express.User
 declare global {
@@ -22,7 +22,7 @@ passport.serializeUser(async (user, done) => {
 });
 
 passport.deserializeUser(async (id, done) => {
-  const users = await prisma.user.findMany();
+  const users = await client.user.findMany();
   const matchingUser = users.find((user: User) => user.id === id);
   done(null, matchingUser);
 });
@@ -40,7 +40,7 @@ export const githubStrat = new GitHubStrategy(
     profile: passport.Profile,
     done: (err: any, user?: Express.User) => void,
   ) => {
-    const users = await prisma.user.findMany();
+    const users = await client.user.findMany();
     const matchingUser = users.find(
       (user: User) => user.github === profile.username,
     );
@@ -58,7 +58,7 @@ export const githubStrat = new GitHubStrategy(
       name: profile.displayName,
       email: profile.emails[0].value,
     };
-    await prisma.user.create({
+    await client.user.create({
       data: newUser,
     });
     return done(null, newUser);

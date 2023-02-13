@@ -23,6 +23,7 @@
     "nodemon": "^2.0.20",
     "passport": "^0.6.0",
     "passport-github2": "^0.1.12",
+    "ts-node": "^10.9.1",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
