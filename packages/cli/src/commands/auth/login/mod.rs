@@ -1,4 +1,5 @@
 mod cli_auth;
+mod browser_auth;
 
 use anyhow::Result;
 use clap::Parser;
