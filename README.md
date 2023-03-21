@@ -1,11 +1,20 @@
-<p align="center">
-    <a href="https://github.com/substore/substore">
-        <img height=300 alt="substore preview"
-        src="https://user-images.githubusercontent.com/59238070/210085156-1f5d5d92-425b-4a82-ad29-a219980323a7.png
-">
-    </a>
-    <h3 align="center">substore.io</h3>
-    <p align="center">
-        A self-hostable PaaS for deploying all-things data.
-    </p>
-</p>
+# Substore
+
+Hello!
+
+This project is a work in progress, hope to have this shipped by summer.
+
+The remaining significant task involves designing the user interface, as well as configuring the entire codebase for self-hosting. Currently, our databases are deployed on fly.io, but we intend to shift to bare-metal for the non self-hostable version of substore.
+
+## Stack
+This is a brief rundown of our stack at the moment
+
+- Rust (For CLI)
+- TypeScript & GraphQL (For the backend, provisioning dbs, sending emails etc)
+- React/Next (For the UI of course)
+
+## Contributing
+
+Contributions are welcome! I will try my best to create issues for todos, I still have to write a contributing doc for Substore that shows what tools to install, what commands to run etc.
+
+**If you have any questions feel free to email me: andrew@nijmeh.cloud**
