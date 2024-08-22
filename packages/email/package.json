@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@react-email/button": "0.0.5",
-    "@react-email/container": "0.0.7-canary.1",
+    "@react-email/container": "0.0.14",
     "@react-email/head": "^0.0.4",
     "@react-email/hr": "^0.0.4",
     "@react-email/html": "0.0.3",
