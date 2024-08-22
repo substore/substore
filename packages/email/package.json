@@ -13,7 +13,7 @@
     "postmark": "^3.0.15"
   },
   "devDependencies": {
-    "@react-email/button": "0.0.5",
+    "@react-email/button": "0.0.17",
     "@react-email/container": "0.0.7-canary.1",
     "@react-email/head": "^0.0.4",
     "@react-email/hr": "^0.0.4",
