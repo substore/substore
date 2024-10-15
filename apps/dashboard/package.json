@@ -19,7 +19,7 @@
     "autoprefixer": "^10.4.13",
     "daisyui": "^2.49.0",
     "database": "*",
-    "next": "13.0.0",
+    "next": "14.2.7",
     "next-http-proxy-middleware": "^1.2.5",
     "postcss": "^8.4.20",
     "radix-ui": "^1.0.1",
